@@ -5,12 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Absheron Legal & Audit Services</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!-- Language Switcher -->
+  <div class="language-switcher">
+    <button onclick="setLanguage('az')">AZ</button>
+    <button onclick="setLanguage('ru')">RU</button>
+    <button onclick="setLanguage('en')">EN</button>
+  </div>
+
   <!-- Header -->
   <header>
-    <img src="logo.png" alt="Absheron Legal & Audit Services" class="logo">
+    <img src="logo.png.png" alt="Absheron Legal & Audit Services" class="logo">
     <h1>Absheron Legal & Audit Services</h1>
     <p class="slogan">Expert consulting for corporate law, tax and financial audits.</p>
   </header>
@@ -19,19 +26,77 @@
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#clients">Clients</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
+    <a href="#blog">Blog</a>
   </nav>
 
   <!-- About Section -->
-  <section id="about" class="card">
+  <section id="about" class="card lang" data-lang-en="About Us" data-lang-az="Haqqımızda" data-lang-ru="О нас">
     <h2>About Us</h2>
-    <p>We provide expert legal, tax, and audit services to businesses in Baku and beyond. Our team is dedicated to ensuring compliance, maximizing efficiency, and guiding you through complex corporate matters.</p>
+    <p>We provide expert legal, tax, and audit services to businesses in Baku and beyond. Our team ensures compliance, maximizes efficiency, and guides you through corporate matters.</p>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="card">
+  <section id="services" class="card lang" data-lang-en="Our Services" data-lang-az="Xidmətlərimiz" data-lang-ru="Наши услуги">
     <h2>Our Services</h2>
     <ul>
       <li>Corporate Law Consulting</li>
       <li>Tax Consulting</li>
-      <li>Financi
+      <li>Financial Audits</li>
+      <li>Business Registration & Compliance</li>
+      <li>Corporate Contract Drafting</li>
+    </ul>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="card lang" data-lang-en="Our Team" data-lang-az="Komandamız" data-lang-ru="Наша команда">
+    <h2>Our Team</h2>
+    <p>Experienced lawyers, auditors, and consultants dedicated to your success.</p>
+  </section>
+
+  <!-- Clients Section -->
+  <section id="clients" class="card lang" data-lang-en="Our Clients" data-lang-az="Müştərilərimiz" data-lang-ru="Наши клиенты">
+    <h2>Our Clients</h2>
+    <p>We work with local and international businesses, providing tailored solutions for each client.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="card lang" data-lang-en="FAQ" data-lang-az="Tez-tez verilən suallar" data-lang-ru="Часто задаваемые вопросы">
+    <h2>FAQ</h2>
+    <p>Find answers to common questions about our services and processes.</p>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="card lang" data-lang-en="Blog" data-lang-az="Bloq" data-lang-ru="Блог">
+    <h2>Blog</h2>
+    <p>Insights and updates on corporate law, tax, and audits.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="card lang" data-lang-en="Contact" data-lang-az="Əlaqə" data-lang-ru="Контакты">
+    <h2>Contact</h2>
+    <p>Phone: +994 55 229 4666</p>
+    <p>Address: Baku, Azerbaijan, Nasimi district, Mirgasimov St.</p>
+    <p>Email: <a href="mailto:calabiyev@bk.ru">calabiyev@bk.ru</a></p>
+    <p>Instagram: <a href="https://instagram.com/absheron.consult" target="_blank">@absheron.consult</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Absheron Legal & Audit Services</p>
+  </footer>
+
+  <!-- Language Switch Script -->
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(section => {
+        const title = section.getAttribute(`data-lang-${lang}`);
+        if(title) section.querySelector('h2').innerText = title;
+      });
+    }
+  </script>
+</body>
+</html>
