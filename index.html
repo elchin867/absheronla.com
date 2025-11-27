@@ -8,54 +8,67 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <!-- Language Switcher -->
-  <div class="language-switcher">
-    <button>AZ</button>
-    <button>RU</button>
-    <button>ENG</button>
-  </div>
-
-  <!-- Header -->
+  <!-- Header / Navigation -->
   <header>
-    <img src="logo.png" alt="Absheron Logo" class="logo">
-    <h1>Absheron Legal & Audit Services</h1>
-    <p class="slogan"><em>Expert consulting for corporate law, tax and financial audits.</em></p>
+    <div class="container header-container">
+      <img src="logo.png" alt="Absheron Logo" class="logo">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <button>AZ</button>
+        <button>RU</button>
+        <button>ENG</button>
+      </div>
+    </div>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#team">Team</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Expert consulting for corporate law, tax and financial audits</h1>
+      <p>Helping your business stay compliant and grow with confidence.</p>
+    </div>
+  </section>
 
   <!-- About Section -->
-  <section id="about" class="card">
-    <h2>About</h2>
-    <p>We provide expert legal, tax, and audit services to businesses in Baku and beyond.</p>
+  <section id="about" class="section card">
+    <h2>About Us</h2>
+    <p>We provide expert legal, tax, and audit services to businesses in Baku and beyond. Our mission is to offer reliable, transparent, and professional services that empower our clients.</p>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="card">
+  <section id="services" class="section card">
     <h2>Services</h2>
-    <ul>
-      <li>Corporate Law Consulting</li>
-      <li>Tax Consulting</li>
-      <li>Financial Audits</li>
-      <li>Business Registration</li>
-      <li>Contract Review</li>
-    </ul>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Corporate Law Consulting</h3>
+        <p>Advising businesses on legal compliance, contracts, and corporate governance.</p>
+      </div>
+      <div class="service-card">
+        <h3>Tax Consulting</h3>
+        <p>Helping companies optimize taxes while remaining fully compliant with regulations.</p>
+      </div>
+      <div class="service-card">
+        <h3>Financial Audits</h3>
+        <p>Providing detailed audits and financial reporting for better business decisions.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Team Section -->
-  <section id="team" class="card">
+  <section id="team" class="section card">
     <h2>Our Team</h2>
-    <p>Our experts have years of experience in corporate law, finance, and audits to serve your business needs.</p>
+    <p>Our experts have years of experience in corporate law, finance, and audits, offering personalized solutions for your business.</p>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="card">
+  <section id="contact" class="section card">
     <h2>Contact</h2>
     <p>Phone: +994552294666</p>
     <p>Address: Baku, Azerbaijan, Nasimi district, Mirgasimov st.</p>
