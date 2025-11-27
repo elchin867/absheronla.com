@@ -4,99 +4,229 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Absheron Legal & Audit Services</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0; line-height: 1.6; background-color: #f4f7f8; color: #333;
+    }
+    .language-switcher { text-align: right; padding: 10px 20px; background-color: #e6f0ff; }
+    .language-switcher button {
+      margin-left: 10px; padding: 5px 10px; font-weight: bold; border: none;
+      border-radius: 5px; background-color: #0073e6; color: white; cursor: pointer;
+      transition: 0.3s transform, 0.3s background-color;
+    }
+    .language-switcher button:hover { background-color: #0047ab; transform: scale(1.1); }
+
+    header {
+      text-align: center; background: linear-gradient(135deg, #0047ab, #0073e6);
+      color: #fff; padding: 50px 20px 30px; position: relative;
+    }
+    header .logo { width: 220px; display: block; margin: 0 auto 20px;
+      border-radius: 15px; border: 2px solid #fff; transition: transform 0.5s ease;
+    }
+    header .logo:hover { transform: rotate(-5deg) scale(1.05); }
+    header h1 { margin: 10px 0; font-size: 36px; font-weight: bold; }
+    header .slogan { font-size: 18px; font-style: italic; margin-top: 5px; opacity: 0.85; }
+
+    nav {
+      background-color: #0073e6; text-align: center; padding: 12px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15); position: sticky; top: 0; z-index: 100;
+    }
+    nav a {
+      color: #fff; text-decoration: none; margin: 0 15px; font-weight: 600;
+      font-size: 18px; transition: color 0.3s ease, transform 0.3s ease;
+    }
+    nav a:hover { color: #ffcc00; transform: scale(1.05); }
+
+    section.card {
+      background: #fff; max-width: 900px; margin: 40px auto; padding: 35px 30px;
+      border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      scroll-margin-top: 80px; opacity: 0; transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+    section.card.visible { opacity: 1; transform: translateY(0); }
+    section h2 { color: #0047ab; margin-bottom: 15px; font-size: 28px; }
+    section ul { list-style-type: square; padding-left: 20px; }
+    section a { color: #0073e6; text-decoration: none; transition: 0.3s color; }
+    section a:hover { text-decoration: underline; color: #0047ab; }
+
+    footer { background-color: #222; color: #fff; text-align: center; padding: 25px 0; }
+
+    @media (max-width: 768px) {
+      nav a { display: block; margin: 10px 0; }
+      header h1 { font-size: 28px; }
+      header .logo { width: 150px; }
+    }
+
+    @keyframes fadeUp { from {opacity:0; transform:translateY(50px);} to {opacity:1; transform:translateY(0);} }
+    .card.visible { animation: fadeUp 1s forwards; }
+  </style>
 </head>
 <body>
-  <!-- Language Switcher -->
+
   <div class="language-switcher">
-    <button onclick="setLanguage('az')">AZ</button>
-    <button onclick="setLanguage('ru')">RU</button>
-    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="changeLanguage('az')">AZ</button>
+    <button onclick="changeLanguage('ru')">RU</button>
+    <button onclick="changeLanguage('en')">EN</button>
   </div>
 
-  <!-- Header -->
   <header>
-    <img src="logo.png.png" alt="Absheron Legal & Audit Services" class="logo">
-    <h1>Absheron Legal & Audit Services</h1>
-    <p class="slogan">Expert consulting for corporate law, tax and financial audits.</p>
+    <img src="logo.png.png" alt="Absheron Legal Logo" class="logo">
+    <h1 id="title">Absheron Legal & Audit Services</h1>
+    <p class="slogan" id="slogan"><em>Expert consulting for corporate law, tax and financial audits.</em></p>
   </header>
 
-  <!-- Navigation -->
   <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#team">Team</a>
-    <a href="#clients">Clients</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-    <a href="#blog">Blog</a>
+    <a href="#about" id="nav-about">About</a>
+    <a href="#services" id="nav-services">Services</a>
+    <a href="#contact" id="nav-contact">Contact</a>
+    <a href="#team" id="nav-team">Team</a>
+    <a href="#testimonials" id="nav-testimonials">Testimonials</a>
+    <a href="#faq" id="nav-faq">FAQ</a>
   </nav>
 
-  <!-- About Section -->
-  <section id="about" class="card lang" data-lang-en="About Us" data-lang-az="Haqqımızda" data-lang-ru="О нас">
-    <h2>About Us</h2>
-    <p>We provide expert legal, tax, and audit services to businesses in Baku and beyond. Our team ensures compliance, maximizes efficiency, and guides you through corporate matters.</p>
+  <section id="about" class="card visible">
+    <h2 id="about-title">About</h2>
+    <p id="about-text">We provide expert legal, tax, and audit services to businesses in Baku and beyond.</p>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="card lang" data-lang-en="Our Services" data-lang-az="Xidmətlərimiz" data-lang-ru="Наши услуги">
-    <h2>Our Services</h2>
-    <ul>
+  <section id="services" class="card visible">
+    <h2 id="services-title">Services</h2>
+    <ul id="services-list">
       <li>Corporate Law Consulting</li>
       <li>Tax Consulting</li>
       <li>Financial Audits</li>
-      <li>Business Registration & Compliance</li>
-      <li>Corporate Contract Drafting</li>
     </ul>
   </section>
 
-  <!-- Team Section -->
-  <section id="team" class="card lang" data-lang-en="Our Team" data-lang-az="Komandamız" data-lang-ru="Наша команда">
-    <h2>Our Team</h2>
-    <p>Experienced lawyers, auditors, and consultants dedicated to your success.</p>
+  <section id="team" class="card visible">
+    <h2 id="team-title">Our Team</h2>
+    <p id="team-text">Professional lawyers, tax consultants, and auditors with years of experience.</p>
   </section>
 
-  <!-- Clients Section -->
-  <section id="clients" class="card lang" data-lang-en="Our Clients" data-lang-az="Müştərilərimiz" data-lang-ru="Наши клиенты">
-    <h2>Our Clients</h2>
-    <p>We work with local and international businesses, providing tailored solutions for each client.</p>
+  <section id="testimonials" class="card visible">
+    <h2 id="testimonials-title">Testimonials</h2>
+    <p id="testimonial1">“Absheron Legal helped our company navigate complex regulations smoothly.” – Client A</p>
+    <p id="testimonial2">“Professional, reliable, and thorough services.” – Client B</p>
   </section>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="card lang" data-lang-en="FAQ" data-lang-az="Tez-tez verilən suallar" data-lang-ru="Часто задаваемые вопросы">
-    <h2>FAQ</h2>
-    <p>Find answers to common questions about our services and processes.</p>
+  <section id="faq" class="card visible">
+    <h2 id="faq-title">FAQ</h2>
+    <p id="faq1">Q: How can I contact you? <br> A: Use the contact section below.</p>
+    <p id="faq2">Q: What services do you offer? <br> A: Legal, tax, and audit consulting.</p>
   </section>
 
-  <!-- Blog Section -->
-  <section id="blog" class="card lang" data-lang-en="Blog" data-lang-az="Bloq" data-lang-ru="Блог">
-    <h2>Blog</h2>
-    <p>Insights and updates on corporate law, tax, and audits.</p>
+  <section id="contact" class="card visible">
+    <h2 id="contact-title">Contact</h2>
+    <p id="contact-phone">Phone: +994552294666</p>
+    <p id="contact-address">Address: Baku, Azerbaijan, Nasimi district, Mirgasimov st.</p>
+    <p id="contact-email">Email: <a href="mailto:calabiyev@bk.ru">calabiyev@bk.ru</a></p>
+    <p id="contact-instagram">Instagram: <a href="https://instagram.com/absheron.consult" target="_blank">@absheron.consult</a></p>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="card lang" data-lang-en="Contact" data-lang-az="Əlaqə" data-lang-ru="Контакты">
-    <h2>Contact</h2>
-    <p>Phone: +994 55 229 4666</p>
-    <p>Address: Baku, Azerbaijan, Nasimi district, Mirgasimov St.</p>
-    <p>Email: <a href="mailto:calabiyev@bk.ru">calabiyev@bk.ru</a></p>
-    <p>Instagram: <a href="https://instagram.com/absheron.consult" target="_blank">@absheron.consult</a></p>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Absheron Legal & Audit Services</p>
   </footer>
 
-  <!-- Language Switch Script -->
   <script>
-    function setLanguage(lang) {
-      document.querySelectorAll('.lang').forEach(section => {
-        const title = section.getAttribute(`data-lang-${lang}`);
-        if(title) section.querySelector('h2').innerText = title;
-      });
+    const translations = {
+      az: {
+        title: "Absheron Hüquq və Audit Xidmətləri",
+        slogan: "Korporativ hüquq, vergi və maliyyə auditində ekspert məsləhət.",
+        nav: {about: "Haqqımızda", services: "Xidmətlər", contact: "Əlaqə", team: "Komanda", testimonials: "Rəylər", faq: "Suallar"},
+        about: "Biz Bakıda və digər yerlərdə bizneslər üçün ekspert hüquq, vergi və audit xidmətləri təqdim edirik.",
+        services: ["Korporativ Hüquq Məsləhəti", "Vergi Məsləhəti", "Maliyyə Auditi"],
+        team: "Peşəkar hüquqşünaslar, vergi məsləhətçiləri və auditorlar.",
+        testimonials: [
+          "“Absheron Hüquq şirkətimizə mürəkkəb qaydaları rahat keçməyə kömək etdi.” – Müştəri A",
+          "“Peşəkar, etibarlı və hərtərəfli xidmətlər.” – Müştəri B"
+        ],
+        faq: [
+          "S: Necə əlaqə saxlaya bilərəm? A: Aşağıdakı əlaqə bölməsini istifadə edin.",
+          "S: Hansi xidmətləri təklif edirsiniz? A: Hüquq, vergi və audit məsləhəti."
+        ],
+        contact: {
+          phone: "Telefon: +994552294666",
+          address: "Ünvan: Bakı, Azərbaycan, Nəsimi rayonu, Mirqasımov küçəsi",
+          email: 'Email: <a href="mailto:calabiyev@bk.ru">calabiyev@bk.ru</a>',
+          instagram: 'Instagram: <a href="https://instagram.com/absheron.consult" target="_blank">@absheron.consult</a>'
+        }
+      },
+      ru: {
+        title: "Absheron Юридические и Аудиторские Услуги",
+        slogan: "Экспертные консультации по корпоративному праву, налогам и финансовому аудиту.",
+        nav: {about: "О нас", services: "Услуги", contact: "Контакты", team: "Команда", testimonials: "Отзывы", faq: "FAQ"},
+        about: "Мы предоставляем экспертные юридические, налоговые и аудиторские услуги компаниям в Баку и за его пределами.",
+        services: ["Консультации по корпоративному праву", "Налоговые консультации", "Финансовый аудит"],
+        team: "Профессиональные юристы, налоговые консультанты и аудиторы с большим опытом.",
+        testimonials: [
+          "«Absheron Legal помогла нашей компании легко пройти сложные регуляции.» – Клиент А",
+          "«Профессионально, надежно и тщательно.» – Клиент Б"
+        ],
+        faq: [
+          "В: Как с вами связаться? О: Используйте раздел контактов ниже.",
+          "В: Какие услуги вы предлагаете? О: Юридические, налоговые и аудиторские консультации."
+        ],
+        contact: {
+          phone: "Телефон: +994552294666",
+          address: "Адрес: Баку, Азербайджан, район Насими, улица Миргасимова",
+          email: 'Email: <a href="mailto:calabiyev@bk.ru">calabiyev@bk.ru</a>',
+          instagram: 'Instagram: <a href="https://instagram.com/absheron.consult" target="_blank">@absheron.consult</a>'
+        }
+      },
+      en: {
+        title: "Absheron Legal & Audit Services",
+        slogan: "Expert consulting for corporate law, tax and financial audits.",
+        nav: {about: "About", services: "Services", contact: "Contact", team: "Team", testimonials: "Testimonials", faq: "FAQ"},
+        about: "We provide expert legal, tax, and audit services to businesses in Baku and beyond.",
+        services: ["Corporate Law Consulting", "Tax Consulting", "Financial Audits"],
+        team: "Professional lawyers, tax consultants, and auditors with years of experience.",
+        testimonials: [
+          "“Absheron Legal helped our company navigate complex regulations smoothly.” – Client A",
+          "“Professional, reliable, and thorough services.” – Client B"
+        ],
+        faq: [
+          "Q: How can I contact you? A: Use the contact section below.",
+          "Q: What services do you offer? A: Legal, tax, and audit consulting."
+        ],
+        contact: {
+          phone: "Phone: +994552294666",
+          address: "Address: Baku, Azerbaijan, Nasimi district, Mirgasimov st.",
+          email: 'Email: <a href="mailto:calabiyev@bk.ru">calabiyev@bk.ru</a>',
+          instagram: 'Instagram: <a href="https://instagram.com/absheron.consult" target="_blank">@absheron.consult</a>'
+        }
+      }
+    };
+
+    function changeLanguage(lang) {
+      const t = translations[lang];
+      document.getElementById("title").innerHTML = t.title;
+      document.getElementById("slogan").innerHTML = `<em>${t.slogan}</em>`;
+
+      document.getElementById("nav-about").innerText = t.nav.about;
+      document.getElementById("nav-services").innerText = t.nav.services;
+      document.getElementById("nav-contact").innerText = t.nav.contact;
+      document.getElementById("nav-team").innerText = t.nav.team;
+      document.getElementById("nav-testimonials").innerText = t.nav.testimonials;
+      document.getElementById("nav-faq").innerText = t.nav.faq;
+
+      document.getElementById("about-text").innerText = t.about;
+      document.getElementById("services-list").innerHTML = t.services.map(s => `<li>${s}</li>`).join('');
+      document.getElementById("team-text").innerText = t.team;
+      document.getElementById("testimonial1").innerText = t.testimonials[0];
+      document.getElementById("testimonial2").innerText = t.testimonials[1];
+      document.getElementById("faq1").innerText = t.faq[0];
+      document.getElementById("faq2").innerText = t.faq[1];
+
+      document.getElementById("contact-phone").innerHTML = t.contact.phone;
+      document.getElementById("contact-address").innerHTML = t.contact.address;
+      document.getElementById("contact-email").innerHTML = t.contact.email;
+      document.getElementById("contact-instagram").innerHTML = t.contact.instagram;
     }
   </script>
+
 </body>
 </html>
