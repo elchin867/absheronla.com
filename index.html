@@ -4,42 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Absheron Legal & Audit Services</title>
-  <style>
-    body { margin:0; font-family:Arial, sans-serif; background:#f4f7fc; color:#0a1a3c; }
-    header { background:#fff; border-bottom:2px solid #0a1a3c; padding:15px 0; position:sticky; top:0; z-index:1000; }
-    .header-container { width:90%; margin:auto; display:flex; justify-content:space-between; align-items:center; }
-    .logo { height:70px; }
-    .nav-links { list-style:none; display:flex; gap:25px; }
-    .nav-links a { text-decoration:none; color:#0a1a3c; font-weight:bold; }
-    .nav-links a:hover { color:#2aa3dd; }
-
-    /* Dropdown */
-    .dropdown { position:relative; }
-    .dropdown-menu { display:none; position:absolute; top:30px; left:0; background:#fff; border:1px solid #0a1a3c; border-radius:6px; padding:10px 0; list-style:none; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
-    .dropdown-menu li a { display:block; padding:8px 20px; color:#0a1a3c; text-decoration:none; }
-    .dropdown-menu li a:hover { background:#eef5ff; color:#2aa3dd; }
-    .dropdown:hover .dropdown-menu { display:block; }
-
-    .language-switcher button { background:#0a1a3c; color:white; border:none; padding:5px 10px; margin-left:5px; border-radius:5px; cursor:pointer; }
-    .language-switcher button:hover { background:#2aa3dd; }
-
-    .hero { background:linear-gradient(#0a1a3cd9, #2aa3ddcc), url('office.jpg'); background-size:cover; background-position:center; padding:120px 20px; text-align:center; color:white; }
-    .section { width:90%; margin:40px auto; padding:30px; background:white; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); }
-    .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
-    .service-card { background:#eef5ff; padding:20px; border-left:5px solid #0a1a3c; border-radius:8px; }
-    footer { text-align:center; padding:20px; background:#0a1a3c; color:white; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
   <div class="header-container">
-    <img src="logo.png" class="logo" />
+    <img src="logo.png" class="logo" alt="Absheron Logo" />
+
     <nav>
       <ul class="nav-links">
         <li><a href="#about" data-i18n="nav_about">About</a></li>
 
         <li class="dropdown">
-          <a href="#services" data-i18n="nav_services">Services</a>
+          <a href="javascript:void(0);" data-i18n="nav_services">Services ▾</a>
           <ul class="dropdown-menu">
             <li><a href="#corporate-law" data-i18n="service_corporate">Corporate Law</a></li>
             <li><a href="#tax-consulting" data-i18n="service_tax">Tax Consulting</a></li>
@@ -107,43 +85,25 @@
 </footer>
 
 <script>
-const translations = {
-  az: {
-    nav_about: "Haqqımızda",
-    nav_services: "Xidmətlər",
-    nav_team: "Komanda",
-    nav_contact: "Əlaqə",
-    hero_title: "Korporativ hüquq, vergi və audit üzrə peşəkar konsultasiya",
-    hero_sub: "Biznesinizin etibarlı və şəffaf inkişafına dəstək oluruq.",
-    about_title: "Haqqımızda",
-    about_text: "Biz hüquq, vergi və audit sahələrində peşəkar xidmətlər göstəririk.",
-    services_title: "Xidmətlər",
-    service_corporate: "Korporativ Hüquq",
-    service_corporate_text: "Hüquqi uyğunluq, müqavilələr və korporativ idarəetmə üzrə məsləhətlər.",
-    service_tax: "Vergi Konsultasiyası",
-    service_tax_text: "Şirkətlərin vergilərini optimallaşdırmasına kömək edirik.",
-    service_audit: "Audit Xidmətləri",
-    service_audit_text: "Maliyyə hesabatlarının dəqiq və detallı auditi.",
-    team_title: "Komanda",
-    team_text: "Mütəxəssislərimiz uzunillik təcrübəyə malikdir.",
-    contact_title: "Əlaqə",
-    contact_phone: "Telefon:",
-    contact_address: "Ünvan:"
-  },
-
-  ru: {
-    nav_about: "О нас",
-    nav_services: "Услуги",
-    nav_team: "Команда",
-    nav_contact: "Контакты",
-    hero_title: "Экспертные консультации по корпоративному праву, налогам и аудиту",
-    hero_sub: "Помогаем вашему бизнесу развиваться с уверенностью.",
-    about_title: "О нас",
-    about_text: "Мы предоставляем юридические, налоговые и аудиторские услуги.",
-    services_title: "Услуги",
-    service_corporate: "Корпоративное право",
-    service_corporate_text: "Консультации по контрактам и корпоративному управлению.",
-    service_tax: "Налоговое консультирование",
-    service_tax_text: "Оптимизация налогов и полное соблюдение норм.",
-    service_audit: "Аудит",
-    service_audit
+  // Language translations
+  const translations = {
+    az: { 
+      nav_about: "Haqqımızda", nav_services: "Xidmətlər", nav_team: "Komanda", nav_contact: "Əlaqə",
+      hero_title: "Korporativ hüquq, vergi və audit üzrə peşəkar konsultasiya",
+      hero_sub: "Biznesinizin etibarlı və şəffaf inkişafına dəstək oluruq.",
+      about_title: "Haqqımızda", about_text: "Biz hüquq, vergi və audit sahələrində peşəkar xidmətlər göstəririk.",
+      services_title: "Xidmətlər",
+      service_corporate: "Korporativ Hüquq", service_corporate_text: "Hüquqi uyğunluq, müqavilələr və korporativ idarəetmə üzrə məsləhətlər.",
+      service_tax: "Vergi Konsultasiyası", service_tax_text: "Şirkətlərin vergilərini optimallaşdırmasına kömək edirik.",
+      service_audit: "Audit Xidmətləri", service_audit_text: "Maliyyə hesabatlarının dəqiq və detallı auditi.",
+      team_title: "Komanda", team_text: "Mütəxəssislərimiz uzunillik təcrübəyə malikdir.",
+      contact_title: "Əlaqə", contact_phone: "Telefon:", contact_address: "Ünvan:"
+    },
+    ru: { 
+      nav_about: "О нас", nav_services: "Услуги", nav_team: "Команда", nav_contact: "Контакты",
+      hero_title: "Экспертные консультации по корпоративному праву, налогам и аудиту",
+      hero_sub: "Помогаем вашему бизнесу развиваться с уверенностью.",
+      about_title: "О нас", about_text: "Мы предоставляем юридические, налоговые и аудиторские услуги.",
+      services_title: "Услуги",
+      service_corporate: "Корпоративное право", service_corporate_text: "Консультации по контрактам и корпоративному управлению.",
+      service
