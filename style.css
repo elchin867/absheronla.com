@@ -5,7 +5,7 @@ a { text-decoration:none; color:inherit; }
 /* Header */
 header { background:#fff; border-bottom:2px solid #0a1a3c; padding:15px 0; position:sticky; top:0; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.05); }
 .header-container { width:90%; margin:auto; display:flex; justify-content:space-between; align-items:center; }
-.logo { height:90px; transition: transform 0.3s; }
+.logo { height:110px; transition: transform 0.3s; }
 .logo:hover { transform:scale(1.05); }
 
 nav { position:relative; }
@@ -40,3 +40,4 @@ h2 { margin-bottom:20px; color:#0a1a3c; border-bottom:2px solid #2aa3dd; display
 
 /* Footer */
 footer { text-align:center; padding:20px; background:#0a1a3c; color:white; margin-top:40px; font-size:0.9rem; }
+
