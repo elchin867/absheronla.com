@@ -106,4 +106,47 @@
       about_title: "О нас", about_text: "Мы предоставляем юридические, налоговые и аудиторские услуги.",
       services_title: "Услуги",
       service_corporate: "Корпоративное право", service_corporate_text: "Консультации по контрактам и корпоративному управлению.",
-      service
+      service_tax: "Налоговое консультирование", service_tax_text: "Оптимизация налогов и соблюдение законов.",
+      service_audit: "Аудит", service_audit_text: "Детальный аудит финансовой отчетности.",
+      team_title: "Команда", team_text: "Наши эксперты имеют многолетний опыт.",
+      contact_title: "Контакты", contact_phone: "Телефон:", contact_address: "Адрес:"
+    },
+    en: { 
+      nav_about: "About", nav_services: "Services", nav_team: "Team", nav_contact: "Contact",
+      hero_title: "Expert consulting for corporate law, tax and financial audits",
+      hero_sub: "Helping your business stay compliant and grow with confidence.",
+      about_title: "About Us", about_text: "We provide expert legal, tax, and audit services to businesses in Baku and beyond.",
+      services_title: "Services",
+      service_corporate: "Corporate Law Consulting", service_corporate_text: "Advising businesses on legal compliance, contracts, and corporate governance.",
+      service_tax: "Tax Consulting", service_tax_text: "Helping companies optimize taxes while remaining compliant.",
+      service_audit: "Financial Audits", service_audit_text: "Providing detailed audits and financial reporting.",
+      team_title: "Our Team", team_text: "Our experts have years of experience offering personalized business solutions.",
+      contact_title: "Contact", contact_phone: "Phone:", contact_address: "Address:"
+    }
+  };
+
+  // Language switcher
+  document.querySelectorAll('.language-switcher button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        el.textContent = translations[lang][el.dataset.i18n];
+      });
+    });
+  });
+
+  // Clickable dropdown toggle
+  const dropdown = document.querySelector('.dropdown > a');
+  const dropdownLi = document.querySelector('.dropdown');
+  dropdown.addEventListener('click', e => {
+    dropdownLi.classList.toggle('active');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', e => {
+    if (!dropdownLi.contains(e.target)) dropdownLi.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
