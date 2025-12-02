@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services - Absheron Legal & Audit Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="meta_title_services">Services – Absheron Legal & Audit Services</title>
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="canonical" href="https://yourdomain.com/services.html">
 </head>
+
 <body>
 
-<!-- Header -->
+<!-- HEADER -->
 <header>
   <div class="header-container">
-    <a href="index.html"><img src="logo.png" class="logo" alt="Absheron Logo" /></a>
 
-    <!-- Hamburger -->
+    <a href="index.html">
+      <img src="logo.png" alt="Absheron Legal & Audit Services" class="logo">
+    </a>
+
     <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
 
     <nav>
       <ul class="nav-links">
         <li><a href="index.html" data-i18n="menu_home">Home</a></li>
         <li><a href="about.html" data-i18n="menu_about">About</a></li>
-        <li><a href="services.html" data-i18n="menu_services">Services</a></li>
+        <li><a href="services.html" class="active" data-i18n="menu_services">Services</a></li>
+        <li><a href="legal-updates.html" data-i18n="menu_legal_updates">Legislation & News</a></li>
         <li><a href="faq.html" data-i18n="menu_faq">FAQ</a></li>
         <li><a href="team.html" data-i18n="menu_team">Team</a></li>
         <li><a href="contact.html" data-i18n="menu_contact">Contact</a></li>
@@ -34,96 +41,203 @@
     </nav>
 
     <div class="language-switcher">
-      <button data-lang="az">🇦🇿</button>
-      <button data-lang="ru">🇷🇺</button>
-      <button data-lang="en">🇬🇧</button>
+      <button data-lang="az">AZ</button>
+      <button data-lang="ru">RU</button>
+      <button data-lang="en">ENG</button>
     </div>
   </div>
 </header>
 
-<!-- Services Section -->
+<!-- BREADCRUMB -->
+<div class="wrapper" style="margin-top:20px; font-size:0.9rem; opacity:0.9;">
+  <a href="index.html" data-i18n="menu_home">Home</a> ›
+  <span data-i18n="menu_services">Services</span>
+</div>
+
+<!-- SERVICES SECTION -->
 <section class="section">
-  <h2 data-i18n="services_title">Services</h2>
+  <h2 data-i18n="services_title">Our Services</h2>
+
   <div class="services-grid">
 
-    <!-- Service 1 -->
-    <div class="service-card">
-      <h3 data-i18n="service_1_title">Corporate and Commercial Law</h3>
-      <p data-i18n="service_1_text">Registration of commercial and non-commercial entities, selection of organizational forms, preparation of charters and founding documents, etc.</p>
+    <!-- 1. Corporate & Commercial Law -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-scale-balanced"></i>
+        <span data-i18n="s1_title">Corporate & Commercial Law Services</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s1_li1"></li>
+        <li data-i18n="s1_li2"></li>
+        <li data-i18n="s1_li3"></li>
+        <li data-i18n="s1_li4"></li>
+        <li data-i18n="s1_li5"></li>
+        <li data-i18n="s1_li6"></li>
+        <li data-i18n="s1_li7"></li>
+        <li data-i18n="s1_li8"></li>
+        <li data-i18n="s1_li9"></li>
+      </ul>
     </div>
 
-    <!-- Service 2 -->
-    <div class="service-card">
-      <h3 data-i18n="service_2_title">Tax Law and Tax Consulting</h3>
-      <p data-i18n="service_2_text">Tax residency advice, double taxation treaties, risk assessment, planning, and corporate tax audit.</p>
+    <!-- 2. Tax Law -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-file-invoice-dollar"></i>
+        <span data-i18n="s2_title">Tax Law & Consulting</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s2_li1"></li>
+        <li data-i18n="s2_li2"></li>
+        <li data-i18n="s2_li3"></li>
+        <li data-i18n="s2_li4"></li>
+        <li data-i18n="s2_li5"></li>
+        <li data-i18n="s2_li6"></li>
+        <li data-i18n="s2_li7"></li>
+      </ul>
     </div>
 
-    <!-- Service 3 -->
-    <div class="service-card">
-      <h3 data-i18n="service_3_title">Accounting and Financial Reporting</h3>
-      <p data-i18n="service_3_text">Accounting, debtor-creditor management, payroll and HR, financial statements, and analysis.</p>
+    <!-- 3. Accounting Services -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-calculator"></i>
+        <span data-i18n="s3_title">Accounting & Bookkeeping Services</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s3_li1"></li>
+        <li data-i18n="s3_li2"></li>
+        <li data-i18n="s3_li3"></li>
+        <li data-i18n="s3_li4"></li>
+        <li data-i18n="s3_li5"></li>
+        <li data-i18n="s3_li6"></li>
+        <li data-i18n="s3_li7"></li>
+      </ul>
     </div>
 
-    <!-- Service 4 -->
-    <div class="service-card">
-      <h3 data-i18n="service_4_title">Audit Services</h3>
-      <p data-i18n="service_4_text">Financial statement audit, internal audit, tax audit, asset and liability evaluation.</p>
+    <!-- 4. Audit Services -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span data-i18n="s4_title">Audit Services</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s4_li1"></li>
+        <li data-i18n="s4_li2"></li>
+        <li data-i18n="s4_li3"></li>
+        <li data-i18n="s4_li4"></li>
+      </ul>
     </div>
 
-    <!-- Service 5 -->
-    <div class="service-card">
-      <h3 data-i18n="service_5_title">Labor Law Services</h3>
-      <p data-i18n="service_5_text">Preparation of labor contracts, HR documents, leave and travel policies, legal representation in labor disputes.</p>
+    <!-- 5. Labour Law -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-briefcase"></i>
+        <span data-i18n="s5_title">Employment & Labour Law</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s5_li1"></li>
+        <li data-i18n="s5_li2"></li>
+        <li data-i18n="s5_li3"></li>
+        <li data-i18n="s5_li4"></li>
+        <li data-i18n="s5_li5"></li>
+      </ul>
     </div>
 
-    <!-- Service 6 -->
-    <div class="service-card">
-      <h3 data-i18n="service_6_title">Financial and Investment Law</h3>
-      <p data-i18n="service_6_text">Credit and investment contracts, M&A operations, investment agreements, risk assessment.</p>
+    <!-- 6. Finance & Investment Law -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-coins"></i>
+        <span data-i18n="s6_title">Finance & Investment Law</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s6_li1"></li>
+        <li data-i18n="s6_li2"></li>
+        <li data-i18n="s6_li3"></li>
+        <li data-i18n="s6_li4"></li>
+        <li data-i18n="s6_li5"></li>
+      </ul>
     </div>
 
-    <!-- Service 7 -->
-    <div class="service-card">
-      <h3 data-i18n="service_7_title">Real Estate and Construction Law</h3>
-      <p data-i18n="service_7_text">Construction permits, project documentation analysis, applications to government authorities, risk evaluation.</p>
+    <!-- 7. Real Estate & Construction -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-building"></i>
+        <span data-i18n="s7_title">Real Estate & Construction Law</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s7_li1"></li>
+        <li data-i18n="s7_li2"></li>
+        <li data-i18n="s7_li3"></li>
+        <li data-i18n="s7_li4"></li>
+        <li data-i18n="s7_li5"></li>
+      </ul>
     </div>
 
-    <!-- Service 8 -->
-    <div class="service-card">
-      <h3 data-i18n="service_8_title">Court and Arbitration Disputes</h3>
-      <p data-i18n="service_8_text">Civil, administrative and commercial disputes, credit/debt conflicts, contract breaches, appeals and cassation preparation.</p>
+    <!-- 8. Court & Arbitration -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-gavel"></i>
+        <span data-i18n="s8_title">Court & Arbitration</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s8_li1"></li>
+        <li data-i18n="s8_li2"></li>
+        <li data-i18n="s8_li3"></li>
+        <li data-i18n="s8_li4"></li>
+        <li data-i18n="s8_li5"></li>
+      </ul>
     </div>
 
-    <!-- Service 9 -->
-    <div class="service-card">
-      <h3 data-i18n="service_9_title">Intellectual Property Law</h3>
-      <p data-i18n="service_9_text">Trademark, patent, copyright registration, resolution of intellectual property disputes.</p>
+    <!-- 9. Intellectual Property -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-lightbulb"></i>
+        <span data-i18n="s9_title">Intellectual Property Law</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s9_li1"></li>
+        <li data-i18n="s9_li2"></li>
+        <li data-i18n="s9_li3"></li>
+      </ul>
     </div>
 
-    <!-- Service 10 -->
-    <div class="service-card">
-      <h3 data-i18n="service_10_title">Valuation Services</h3>
-      <p data-i18n="service_10_text">Real estate, asset, and business valuation, financial expert reports.</p>
+    <!-- 10. Valuation -->
+    <div class="service-card accordion">
+      <h3 class="accordion-header">
+        <i class="fa-solid fa-scale-unbalanced"></i>
+        <span data-i18n="s10_title">Valuation Services</span>
+      </h3>
+      <ul class="accordion-content">
+        <li data-i18n="s10_li1"></li>
+        <li data-i18n="s10_li2"></li>
+        <li data-i18n="s10_li3"></li>
+      </ul>
     </div>
 
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
   <div class="socials">
-    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
   </div>
   <p>&copy; 2025 Absheron Legal & Audit Services</p>
 </footer>
 
-<!-- Scripts -->
 <script src="script.js"></script>
+
 <script>
-  // Hamburger toggle
+  /* ACCORDION */
+  document.querySelectorAll(".accordion-header").forEach(header => {
+    header.addEventListener("click", () => {
+      header.nextElementSibling.classList.toggle("open");
+    });
+  });
+
+  /* MOBILE MENU */
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   hamburger.addEventListener('click', () => {
