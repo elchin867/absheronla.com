@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="meta_title_legal_updates">
+    Legislation & News – Absheron Legal & Audit Services
+  </title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="canonical" href="https://yourdomain.com/legal-updates.html">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-container">
+
+    <a href="index.html">
+      <img src="logo.png" alt="Absheron Legal & Audit Services" class="logo">
+    </a>
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="menu_home">Home</a></li>
+        <li><a href="about.html" data-i18n="menu_about">About</a></li>
+        <li><a href="services.html" data-i18n="menu_services">Services</a></li>
+        <li><a href="legal-updates.html" class="active" data-i18n="menu_legal_updates">Legislation & News</a></li>
+        <li><a href="faq.html" data-i18n="menu_faq">FAQ</a></li>
+        <li><a href="team.html" data-i18n="menu_team">Team</a></li>
+        <li><a href="contact.html" data-i18n="menu_contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="language-switcher">
+      <button data-lang="az">AZ</button>
+      <button data-lang="ru">RU</button>
+      <button data-lang="en">ENG</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="wrapper" style="margin-top:20px; font-size:0.9rem; opacity:0.9;">
+  <a href="index.html" data-i18n="menu_home">Home</a> ›
+  <span data-i18n="menu_legal_updates">Legislation & News</span>
+</div>
+
+<!-- MAIN SECTION -->
+<section class="section">
+  <h2 data-i18n="legal_updates_title">Legislation & News</h2>
+
+  <p data-i18n="legal_updates_intro">
+    Stay informed with the latest legal, tax, audit and regulatory updates in Azerbaijan.
+  </p>
+
+  <!-- SEARCH BAR -->
+  <div style="margin-top:25px; display:flex; justify-content:center;">
+    <input id="newsSearch" 
+           type="text" 
+           placeholder="Search..." 
+           data-i18n-placeholder="legal_updates_search"
+           style="width:100%; max-width:450px; padding:12px 15px; border-radius:8px; border:1px solid #ccc;">
+  </div>
+
+  <!-- CATEGORY FILTERS -->
+  <div style="margin-top:20px; text-align:center;">
+    <button class="btn news-filter" data-filter="all" data-i18n="filter_all">All</button>
+    <button class="btn news-filter" data-filter="law" data-i18n="filter_law">Law</button>
+    <button class="btn news-filter" data-filter="tax" data-i18n="filter_tax">Tax</button>
+    <button class="btn news-filter" data-filter="audit" data-i18n="filter_audit">Audit</button>
+    <button class="btn news-filter" data-filter="labor" data-i18n="filter_labor">Labor</button>
+    <button class="btn news-filter" data-filter="corporate" data-i18n="filter_corporate">Corporate</button>
+  </div>
+
+  <!-- ARTICLES GRID -->
+  <div id="newsGrid" class="services-grid" style="margin-top:30px;">
+
+    <!-- SAMPLE ARTICLE 1 -->
+    <a href="article-template.html" class="service-card" data-category="law">
+      <h3>
+        <i class="fa-solid fa-scale-balanced"></i>
+        <span data-i18n="news_sample1_title">Changes to the Civil Code (2025)</span>
+      </h3>
+      <p data-i18n="news_sample1_excerpt">
+        New amendments affecting contract law, liability and corporate governance.
+      </p>
+    </a>
+
+    <!-- SAMPLE ARTICLE 2 -->
+    <a href="article-template.html" class="service-card" data-category="tax">
+      <h3>
+        <i class="fa-solid fa-file-invoice-dollar"></i>
+        <span data-i18n="news_sample2_title">New VAT Regulations Introduced</span>
+      </h3>
+      <p data-i18n="news_sample2_excerpt">
+        Key updates on reporting obligations and deduction rules.
+      </p>
+    </a>
+
+    <!-- SAMPLE ARTICLE 3 -->
+    <a href="article-template.html" class="service-card" data-category="labor">
+      <h3>
+        <i class="fa-solid fa-briefcase"></i>
+        <span data-i18n="news_sample3_title">Amendments to the Labor Code</span>
+      </h3>
+      <p data-i18n="news_sample3_excerpt">
+        Updates regarding remote work, leave rights and employment contracts.
+      </p>
+    </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="socials">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p>&copy; 2025 Absheron Legal & Audit Services</p>
+</footer>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+<script>
+  /* SEARCH */
+  document.getElementById("newsSearch").addEventListener("keyup", function() {
+    let filter = this.value.toLowerCase();
+    document.querySelectorAll("#newsGrid .service-card").forEach(card => {
+      card.style.display = card.textContent.toLowerCase().includes(filter) ? "" : "none";
+    });
+  });
+
+  /* FILTER BUTTONS */
+  document.querySelectorAll(".news-filter").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const category = btn.dataset.filter;
+      document.querySelectorAll("#newsGrid .service-card").forEach(card => {
+        if (category === "all" || card.dataset.category === category) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+
+  /* MOBILE MENU */
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.add('active');
+  });
+</script>
+
+</body>
+</html>
