@@ -60,7 +60,7 @@ header {
 }
 
 .logo {
-  height: 130px; /* bigger logo */
+  height: 160px; /* bigger logo */
   transition: transform 0.3s;
 }
 
@@ -398,3 +398,4 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
