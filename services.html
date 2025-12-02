@@ -1,69 +1,136 @@
-<!-- SERVICES.HTML -->
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services - Absheron Legal & Audit Services</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Absheron Legal & Audit Services</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+<!-- Header -->
 <header>
-<div class="header-container">
-<img src="logo.png" class="logo" alt="Absheron Logo">
-<nav>
-<ul class="nav-links">
-<li><a href="index.html" data-i18n="menu_home">Home</a></li>
-<li><a href="about.html" data-i18n="menu_about">About</a></li>
-<li><a href="services.html" class="active" data-i18n="menu_services">Services</a></li>
-<li><a href="faq.html" data-i18n="menu_faq">FAQ</a></li>
-<li><a href="team.html" data-i18n="menu_team">Team</a></li>
-<li><a href="contact.html" data-i18n="menu_contact">Contact</a></li>
-</ul>
-</nav>
-<div class="language-switcher">
-<button data-lang="az">🇦🇿</button>
-<button data-lang="ru">🇷🇺</button>
-<button data-lang="en">🇺🇸</button>
-</div>
-</div>
+  <div class="header-container">
+    <a href="index.html"><img src="logo.png" class="logo" alt="Absheron Logo" /></a>
+
+    <!-- Hamburger -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="menu_home">Home</a></li>
+        <li><a href="about.html" data-i18n="menu_about">About</a></li>
+        <li><a href="services.html" data-i18n="menu_services">Services</a></li>
+        <li><a href="faq.html" data-i18n="menu_faq">FAQ</a></li>
+        <li><a href="team.html" data-i18n="menu_team">Team</a></li>
+        <li><a href="contact.html" data-i18n="menu_contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="language-switcher">
+      <button data-lang="az">🇦🇿</button>
+      <button data-lang="ru">🇷🇺</button>
+      <button data-lang="en">🇬🇧</button>
+    </div>
+  </div>
 </header>
 
+<!-- Services Section -->
 <section class="section">
-<h2 data-i18n="services_title">Our Services</h2>
-<div class="accordion">
+  <h2 data-i18n="services_title">Services</h2>
+  <div class="services-grid">
 
-<!-- Example Service Category -->
-<div class="accordion-item">
-  <div class="accordion-header" data-i18n="service_1_title">Korporativ və Kommersiya Hüququ Xidmətləri</div>
-  <div class="accordion-content" data-i18n="service_1_content">
-    - Kommersiya və qeyri-kommersiya hüquqi şəxslərin qeydiyyatı (MMC, ASC, QSC, MMMC, MTK)<br>
-    - Təşkilati-hüquqi formanın seçilməsi<br>
-    - Nizamnamə və təsis sənədlərinin hazırlanması<br>
-    - Filial və nümayəndəliklərin yaradılması<br>
-    - Nizamnamə kapitalının formalaşdırılması və artırılması<br>
-    - Direktorlar şurasının səlahiyyətləri üzrə hüquqi məsləhətlər<br>
-    - Səhmdar hüquqları və səhmdar müqavilələrinin hazırlanması<br>
-    - Yenidən təşkil proseslərinin hüquqi müşayiəti<br>
-    - Korporativ müqavilələrin və daxili siyasətlərin hazırlanması<br>
-    - Mübahisələrin həlli və məhkəmə təmsilçiliyi
+    <!-- Service 1 -->
+    <div class="service-card">
+      <h3 data-i18n="service_1_title">Corporate and Commercial Law</h3>
+      <p data-i18n="service_1_text">Registration of commercial and non-commercial entities, selection of organizational forms, preparation of charters and founding documents, etc.</p>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card">
+      <h3 data-i18n="service_2_title">Tax Law and Tax Consulting</h3>
+      <p data-i18n="service_2_text">Tax residency advice, double taxation treaties, risk assessment, planning, and corporate tax audit.</p>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-card">
+      <h3 data-i18n="service_3_title">Accounting and Financial Reporting</h3>
+      <p data-i18n="service_3_text">Accounting, debtor-creditor management, payroll and HR, financial statements, and analysis.</p>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-card">
+      <h3 data-i18n="service_4_title">Audit Services</h3>
+      <p data-i18n="service_4_text">Financial statement audit, internal audit, tax audit, asset and liability evaluation.</p>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="service-card">
+      <h3 data-i18n="service_5_title">Labor Law Services</h3>
+      <p data-i18n="service_5_text">Preparation of labor contracts, HR documents, leave and travel policies, legal representation in labor disputes.</p>
+    </div>
+
+    <!-- Service 6 -->
+    <div class="service-card">
+      <h3 data-i18n="service_6_title">Financial and Investment Law</h3>
+      <p data-i18n="service_6_text">Credit and investment contracts, M&A operations, investment agreements, risk assessment.</p>
+    </div>
+
+    <!-- Service 7 -->
+    <div class="service-card">
+      <h3 data-i18n="service_7_title">Real Estate and Construction Law</h3>
+      <p data-i18n="service_7_text">Construction permits, project documentation analysis, applications to government authorities, risk evaluation.</p>
+    </div>
+
+    <!-- Service 8 -->
+    <div class="service-card">
+      <h3 data-i18n="service_8_title">Court and Arbitration Disputes</h3>
+      <p data-i18n="service_8_text">Civil, administrative and commercial disputes, credit/debt conflicts, contract breaches, appeals and cassation preparation.</p>
+    </div>
+
+    <!-- Service 9 -->
+    <div class="service-card">
+      <h3 data-i18n="service_9_title">Intellectual Property Law</h3>
+      <p data-i18n="service_9_text">Trademark, patent, copyright registration, resolution of intellectual property disputes.</p>
+    </div>
+
+    <!-- Service 10 -->
+    <div class="service-card">
+      <h3 data-i18n="service_10_title">Valuation Services</h3>
+      <p data-i18n="service_10_text">Real estate, asset, and business valuation, financial expert reports.</p>
+    </div>
+
   </div>
-</div>
-
-<!-- Repeat similar blocks for service 2-10 with respective data-i18n -->
-
-</div>
 </section>
 
+<!-- Footer -->
 <footer>
-<div class="socials">
-<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-<a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-</div>
-<p>&copy; 2025 Absheron Legal & Audit Services</p>
+  <div class="socials">
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p>&copy; 2025 Absheron Legal & Audit Services</p>
 </footer>
-<script src="script.js
+
+<!-- Scripts -->
+<script src="script.js"></script>
+<script>
+  // Hamburger toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
