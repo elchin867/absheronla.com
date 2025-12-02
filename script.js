@@ -67,7 +67,7 @@ const translations = {
   az: {
 
     /* ===== MENU ===== */
-    menu_home: "Ana Səhifə",
+    menu_home: "Əsas Səhifə",
     menu_about: "Haqqımızda",
     menu_services: "Xidmətlər",
     menu_legal_updates: "Qanunvericilik və Xəbərlər",
