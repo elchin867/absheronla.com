@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ - Absheron Legal & Audit Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="meta_title_faq">FAQ – Absheron Legal & Audit Services</title>
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="canonical" href="https://yourdomain.com/faq.html">
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="header-container">
-    <a href="index.html"><img src="logo.png" class="logo" alt="Absheron Logo" /></a>
+
+    <a href="index.html">
+      <img src="logo.png" alt="Absheron Legal & Audit Services" class="logo">
+    </a>
 
     <div class="hamburger">
       <span></span>
@@ -25,43 +34,108 @@
         <li><a href="index.html" data-i18n="menu_home">Home</a></li>
         <li><a href="about.html" data-i18n="menu_about">About</a></li>
         <li><a href="services.html" data-i18n="menu_services">Services</a></li>
-        <li><a href="faq.html" data-i18n="menu_faq">FAQ</a></li>
+        <li><a href="legal-updates.html" data-i18n="menu_legal_updates">Legislation & News</a></li>
+        <li><a href="faq.html" class="active" data-i18n="menu_faq">FAQ</a></li>
         <li><a href="team.html" data-i18n="menu_team">Team</a></li>
         <li><a href="contact.html" data-i18n="menu_contact">Contact</a></li>
       </ul>
     </nav>
 
     <div class="language-switcher">
-      <button data-lang="az">🇦🇿</button>
-      <button data-lang="ru">🇷🇺</button>
-      <button data-lang="en">🇬🇧</button>
+      <button data-lang="az">AZ</button>
+      <button data-lang="ru">RU</button>
+      <button data-lang="en">ENG</button>
     </div>
+
   </div>
 </header>
 
+<!-- BREADCRUMBS -->
+<div class="wrapper" style="margin-top:20px; font-size:0.9rem; opacity:0.9;">
+  <a href="index.html" data-i18n="menu_home">Home</a> ›
+  <span data-i18n="menu_faq">FAQ</span>
+</div>
+
+<!-- FAQ SECTION -->
 <section class="section">
-  <h2 data-i18n="faq_title">FAQ</h2>
-  <p data-i18n="faq_text">Here you can put frequently asked questions and answers about our legal, tax, and audit services.</p>
+  <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+
+  <p data-i18n="faq_intro">Find answers to the most common questions our clients ask.</p>
+
+  <div class="faq-container" style="margin-top:30px;">
+
+    <!-- FAQ ITEM 1 -->
+    <div class="faq-item" style="margin-bottom:20px;">
+      <h3 class="faq-question" data-i18n="faq_q1">
+        What services do you provide?
+      </h3>
+      <p class="faq-answer" style="display:none;" data-i18n="faq_a1">
+        We offer legal consulting, tax assistance, audit services, corporate compliance and documentation support.
+      </p>
+    </div>
+
+    <!-- FAQ ITEM 2 -->
+    <div class="faq-item" style="margin-bottom:20px;">
+      <h3 class="faq-question" data-i18n="faq_q2">
+        How can I contact you for consultation?
+      </h3>
+      <p class="faq-answer" style="display:none;" data-i18n="faq_a2">
+        You can reach us by phone, email, WhatsApp or by filling out the contact form.
+      </p>
+    </div>
+
+    <!-- FAQ ITEM 3 -->
+    <div class="faq-item" style="margin-bottom:20px;">
+      <h3 class="faq-question" data-i18n="faq_q3">
+        Do you work with foreign companies?
+      </h3>
+      <p class="faq-answer" style="display:none;" data-i18n="faq_a3">
+        Yes, we provide legal and financial services for both local and international businesses operating in Azerbaijan.
+      </p>
+    </div>
+
+    <!-- FAQ ITEM 4 -->
+    <div class="faq-item" style="margin-bottom:20px;">
+      <h3 class="faq-question" data-i18n="faq_q4">
+        Do you provide tax consulting for individuals?
+      </h3>
+      <p class="faq-answer" style="display:none;" data-i18n="faq_a4">
+        Yes, we assist individuals with tax reporting, residency issues and declarations.
+      </p>
+    </div>
+
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="socials">
-    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
   </div>
   <p>&copy; 2025 Absheron Legal & Audit Services</p>
 </footer>
 
+<!-- SCRIPT -->
 <script src="script.js"></script>
+
+<!-- FAQ TOGGLE SCRIPT -->
 <script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  hamburger.classList.toggle('active');
-});
+  document.querySelectorAll(".faq-question").forEach(q => {
+    q.addEventListener("click", () => {
+      const ans = q.nextElementSibling;
+      ans.style.display = ans.style.display === "none" ? "block" : "none";
+    });
+  });
+
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
 </script>
 
 </body>
