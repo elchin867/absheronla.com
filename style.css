@@ -26,27 +26,38 @@ header { background:#fff; border-bottom:2px solid #0a1a3c; padding:15px 0; posit
 .dropdown-menu li a:hover { background:#eef5ff; color:#2aa3dd; cursor:pointer; }
 .dropdown.active .dropdown-menu { display:block; }
 
-/* Language Switcher (flags or ENG) */
+/* Language Switcher (uniform text for all languages) */
 .language-switcher button {
   background: none;
-  border: none;
+  border: 1px solid #0a1a3c; /* optional: small border for visibility */
+  border-radius: 6px;
   margin-left: 5px;
   cursor: pointer;
-  font-size: 1.5rem;             /* same size for all */
-  padding: 0 5px;                /* small horizontal padding for ENG text */
-  transition: transform 0.3s, color 0.3s;
-  font-family: 'Segoe UI', Arial, sans-serif; /* uniform font */
-  font-weight: bold;             /* make text bold like emojis */
-  line-height: 1;                /* align text vertically */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.language-switcher button:hover {
-  transform: scale(1.2);
-  color: #2aa3dd;                /* hover color for all buttons */
+  font-size: 1rem; /* uniform font size */
+  padding: 5px 10px; /* uniform padding */
+  transition: transform 0.3s, color 0.3s, background 0.3s;
+  font-family: 'Segoe UI', Arial, sans-serif; /* enforce same font */
+  font-weight: bold;
+  color: #0a1a3c;
+  line-height: 1;
+  display: inline-block;
+  text-align: center;
+  min-width: 40px; /* same width for all buttons */
 }
 
+.language-switcher button:hover {
+  transform: scale(1.1);
+  color: #fff;
+  background: #2aa3dd;
+}
+
+/* Optional: make ENG, AZ, RU all uppercase to match styling */
+.language-switcher button span {
+  display: inline-block;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 /* Hero */
 .hero { background:linear-gradient(rgba(10,26,60,0.7), rgba(42,163,221,0.6)), url('office.jpg'); background-size:cover; background-position:center; padding:140px 20px; text-align:center; color:white; transition:0.5s; }
@@ -97,4 +108,5 @@ footer .socials a:hover { color:#2aa3dd; transform:scale(1.2); }
   .logo { height:80px; }
   .language-switcher button { font-size:1.3rem; }
 }
+
 
