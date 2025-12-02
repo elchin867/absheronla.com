@@ -1,138 +1,132 @@
+<!-- Full Multi-Page, Multi-Language Website (AZ, RU, EN) with Accordion Services -->
+
+/* FILE STRUCTURE */
+/*
+/index.html
+/about.html
+/services.html
+/faq.html
+/team.html
+/contact.html
+/style.css
+/script.js
+/favicon.ico
+/logo.png
+*/
+
+<!-- index.html (Home Page) -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Absheron Legal & Audit Services</title>
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absheron Legal & Audit Services</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
 <header>
-  <div class="header-container">
-    <img src="logo.png" class="logo" alt="Absheron Logo" />
-
-    <!-- Hamburger menu for mobile -->
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about" data-i18n="nav_about">About</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0);" data-i18n="nav_services">Services ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="#corporate-law" data-i18n="service_corporate">Corporate Law</a></li>
-            <li><a href="#tax-consulting" data-i18n="service_tax">Tax Consulting</a></li>
-            <li><a href="#financial-audit" data-i18n="service_audit">Financial Audit</a></li>
-          </ul>
-        </li>
-        <li><a href="#team" data-i18n="nav_team">Team</a></li>
-        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Language switcher with emoji flags -->
-    <div class="language-switcher">
-      <button data-lang="az">🇦🇿</button>
-      <button data-lang="ru">🇷🇺</button>
-      <button data-lang="en">🇺🇸</button>
-    </div>
-  </div>
+<div class="header-container">
+<img src="logo.png" class="logo" alt="Absheron Logo">
+<nav>
+<ul class="nav-links">
+<li><a href="index.html" class="active" data-i18n="menu_home">Home</a></li>
+<li><a href="about.html" data-i18n="menu_about">About</a></li>
+<li><a href="services.html" data-i18n="menu_services">Services</a></li>
+<li><a href="faq.html" data-i18n="menu_faq">FAQ</a></li>
+<li><a href="team.html" data-i18n="menu_team">Team</a></li>
+<li><a href="contact.html" data-i18n="menu_contact">Contact</a></li>
+</ul>
+</nav>
+<div class="language-switcher">
+<button data-lang="az">🇦🇿</button>
+<button data-lang="ru">🇷🇺</button>
+<button data-lang="en">🇺🇸</button>
+</div>
+</div>
 </header>
 
 <section class="hero">
-  <h1 data-i18n="hero_title">Expert consulting for corporate law, tax and financial audits</h1>
-  <p data-i18n="hero_sub">Helping your business stay compliant and grow with confidence.</p>
+<h1 data-i18n="hero_title">Professional Legal, Audit & Financial Services</h1>
+<p data-i18n="hero_sub">Trusted advisors for businesses, investors, and entrepreneurs in Azerbaijan.</p>
+<a href="services.html" class="btn" data-i18n="hero_button">Our Services</a>
 </section>
 
-<section id="about" class="section">
-  <h2 data-i18n="about_title">About Us</h2>
-  <p data-i18n="about_text">We provide expert legal, tax, and audit services to businesses in Baku and beyond.</p>
-</section>
-
-<section id="services" class="section">
-  <h2 data-i18n="services_title">Services</h2>
-  <div class="services-grid">
-    <div class="service-card" id="corporate-law">
-      <h3 data-i18n="service_corporate">Corporate Law Consulting</h3>
-      <p data-i18n="service_corporate_text">Advising businesses on legal compliance, contracts, and corporate governance.</p>
-    </div>
-    <div class="service-card" id="tax-consulting">
-      <h3 data-i18n="service_tax">Tax Consulting</h3>
-      <p data-i18n="service_tax_text">Helping companies optimize taxes while remaining compliant.</p>
-    </div>
-    <div class="service-card" id="financial-audit">
-      <h3 data-i18n="service_audit">Financial Audits</h3>
-      <p data-i18n="service_audit_text">Providing detailed audits and financial reporting.</p>
-    </div>
-  </div>
-</section>
-
-<section id="team" class="section">
-  <h2 data-i18n="team_title">Our Team</h2>
-  <p data-i18n="team_text">Our experts have years of experience offering personalized business solutions.</p>
-</section>
-
-<section id="contact" class="section">
-  <h2 data-i18n="contact_title">Contact</h2>
-  <p><strong data-i18n="contact_phone">Phone:</strong> +994552294666</p>
-  <p><strong data-i18n="contact_address">Address:</strong> Baku, Azerbaijan</p>
-  <p><strong>Email:</strong> <a href="mailto:office@absheronla.com">office@absheronla.com</a></p>
-</section>
-
-<!-- Footer with social media icons -->
 <footer>
-  <div class="socials">
-    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  </div>
-  <p>&copy; 2025 Absheron Legal & Audit Services</p>
+<div class="socials">
+<a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+<p>&copy; 2025 Absheron Legal & Audit Services</p>
 </footer>
-
-<script>
-  // Language translations
-  const translations = {
-    az: { /* ... same ... */ },
-    ru: { /* ... same ... */ },
-    en: { /* ... same ... */ }
-  };
-
-  // Language switcher
-  document.querySelectorAll('.language-switcher button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const lang = btn.dataset.lang;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        el.textContent = translations[lang][el.dataset.i18n];
-      });
-    });
-  });
-
-  // Dropdown toggle
-  const dropdown = document.querySelector('.dropdown > a');
-  const dropdownLi = document.querySelector('.dropdown');
-  dropdown.addEventListener('click', e => {
-    dropdownLi.classList.toggle('active');
-  });
-  document.addEventListener('click', e => {
-    if (!dropdownLi.contains(e.target)) dropdownLi.classList.remove('active');
-  });
-
-  // Hamburger toggle
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    hamburger.classList.toggle('active');
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
+
+/* script.js */
+const translations = {
+az: {
+  menu_home: "Home",
+  menu_about: "About",
+  menu_services: "Services",
+  menu_faq: "FAQ",
+  menu_team: "Team",
+  menu_contact: "Contact",
+  hero_title: "Professional Legal, Audit & Financial Services",
+  hero_sub: "Trusted advisors for businesses, investors, and entrepreneurs in Azerbaijan.",
+  hero_button: "Our Services",
+  // Services page translations to be added here
+},
+ru: {
+  menu_home: "Главная",
+  menu_about: "О нас",
+  menu_services: "Услуги",
+  menu_faq: "FAQ",
+  menu_team: "Команда",
+  menu_contact: "Контакты",
+  hero_title: "Профессиональные юридические, аудиторские и финансовые услуги",
+  hero_sub: "Надежные консультанты для бизнеса, инвесторов и предпринимателей в Азербайджане.",
+  hero_button: "Наши услуги",
+},
+en: {
+  menu_home: "Home",
+  menu_about: "About",
+  menu_services: "Services",
+  menu_faq: "FAQ",
+  menu_team: "Team",
+  menu_contact: "Contact",
+  hero_title: "Professional Legal, Audit & Financial Services",
+  hero_sub: "Trusted advisors for businesses, investors, and entrepreneurs in Azerbaijan.",
+  hero_button: "Our Services",
+}
+};
+
+// Language switcher
+document.querySelectorAll('.language-switcher button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      if(translations[lang][el.dataset.i18n]) {
+        el.textContent = translations[lang][el.dataset.i18n];
+      }
+    });
+  });
+});
+
+// Hamburger toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger?.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('active');
+});
+
+// Accordion toggle (for services page)
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    header.parentElement.classList.toggle('active');
+  });
+});
