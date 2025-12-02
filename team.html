@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Team - Absheron Legal & Audit Services</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="meta_title_team">Team – Absheron Legal & Audit Services</title>
+
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="canonical" href="https://yourdomain.com/team.html">
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="header-container">
-    <a href="index.html"><img src="logo.png" class="logo" alt="Absheron Logo" /></a>
+    
+    <a href="index.html">
+      <img src="logo.png" class="logo" alt="Absheron Legal & Audit Services">
+    </a>
 
     <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
 
     <nav>
@@ -25,43 +33,86 @@
         <li><a href="index.html" data-i18n="menu_home">Home</a></li>
         <li><a href="about.html" data-i18n="menu_about">About</a></li>
         <li><a href="services.html" data-i18n="menu_services">Services</a></li>
+        <li><a href="legal-updates.html" data-i18n="menu_legal_updates">Legislation & News</a></li>
         <li><a href="faq.html" data-i18n="menu_faq">FAQ</a></li>
-        <li><a href="team.html" data-i18n="menu_team">Team</a></li>
+        <li><a href="team.html" class="active" data-i18n="menu_team">Team</a></li>
         <li><a href="contact.html" data-i18n="menu_contact">Contact</a></li>
       </ul>
     </nav>
 
     <div class="language-switcher">
-      <button data-lang="az">🇦🇿</button>
-      <button data-lang="ru">🇷🇺</button>
-      <button data-lang="en">🇬🇧</button>
+      <button data-lang="az">AZ</button>
+      <button data-lang="ru">RU</button>
+      <button data-lang="en">ENG</button>
     </div>
+
   </div>
 </header>
 
+<!-- BREADCRUMB -->
+<div class="wrapper" style="margin-top:20px; font-size:0.9rem; opacity:0.9;">
+  <a href="index.html" data-i18n="menu_home">Home</a> ›
+  <span data-i18n="menu_team">Team</span>
+</div>
+
+<!-- TEAM SECTION -->
 <section class="section">
   <h2 data-i18n="team_title">Our Team</h2>
-  <p data-i18n="team_text">Our experts have years of experience offering personalized business solutions.</p>
+
+  <p data-i18n="team_intro">
+    Our specialists combine legal, tax, audit and financial expertise to deliver high-quality solutions.
+  </p>
+
+  <div class="services-grid" style="margin-top:30px;">
+
+    <!-- MEMBER 1 -->
+    <div class="service-card" style="text-align:center;">
+      <img src="team1.jpg" alt="Team Member" 
+           style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:10px;">
+      <h3>Elchin Ch.</h3>
+      <p data-i18n="team_pos1">Founder & Legal Consultant</p>
+    </div>
+
+    <!-- MEMBER 2 -->
+    <div class="service-card" style="text-align:center;">
+      <img src="team2.jpg" alt="Team Member"
+           style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:10px;">
+      <h3 data-i18n="team_name2">Team Member</h3>
+      <p data-i18n="team_pos2">Financial Consultant</p>
+    </div>
+
+    <!-- MEMBER 3 -->
+    <div class="service-card" style="text-align:center;">
+      <img src="team3.jpg" alt="Team Member"
+           style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:10px;">
+      <h3 data-i18n="team_name3">Team Member</h3>
+      <p data-i18n="team_pos3">Audit Specialist</p>
+    </div>
+
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="socials">
-    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
   </div>
   <p>&copy; 2025 Absheron Legal & Audit Services</p>
 </footer>
 
 <script src="script.js"></script>
+
 <script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  hamburger.classList.toggle('active');
-});
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
 </script>
 
 </body>
