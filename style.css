@@ -324,17 +324,11 @@ footer .socials a:hover {
 /* Responsive */
 @media (max-width: 900px) {
   .logo img {
-    height: 70px; /* adjust if needed */
+    height: 70px;
   }
 }
 
-@media (max-width: 480px) {
-  .logo img {
-    height: 55px;
-  }
-}
-
-
+@media (max-width: 768px) {
   nav {
     width: 100%;
   }
@@ -379,8 +373,8 @@ footer .socials a:hover {
 }
 
 @media (max-width: 480px) {
-  .logo {
-    height: 90px;
+  .logo img {
+    height: 55px;
   }
 
   .hero h1 {
@@ -396,6 +390,8 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
+
 
 
 
