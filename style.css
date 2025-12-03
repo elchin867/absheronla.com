@@ -70,7 +70,6 @@ header {
   transform: scale(1.05);
 }
 
-
 /* Hamburger */
 .hamburger {
   display: none;
@@ -329,16 +328,17 @@ footer .socials a:hover {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .logo {
-    height: 110px; /* slightly smaller on tablets */
+  .logo img {
+    height: 70px; /* adjust if needed */
   }
 }
 
-@media (max-width: 768px) {
-  .header-container {
-    flex-wrap: wrap;
-    justify-content: space-between;
+@media (max-width: 480px) {
+  .logo img {
+    height: 55px;
   }
+}
+
 
   nav {
     width: 100%;
@@ -401,6 +401,7 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
 
 
 
