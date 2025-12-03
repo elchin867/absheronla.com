@@ -49,8 +49,14 @@ header {
 }
 
 .header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: flex;
-  align-items: center;   /* center header content vertically */
+  align-items: center;
+  justify-content: space-between; /* ← THIS is the big fix */
+  gap: 20px; /* spacing between logo, nav, language */
 }
 
 .logo {
@@ -392,3 +398,4 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
