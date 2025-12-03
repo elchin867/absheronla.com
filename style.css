@@ -60,10 +60,11 @@ header {
 }
 
 .logo img {
-  height: 160px;
+  height: 80px;   /* elegant, balanced */
   width: auto;
   transition: transform 0.3s;
 }
+
 
 .logo:hover {
   transform: scale(1.05);
@@ -399,5 +400,6 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
 
 
