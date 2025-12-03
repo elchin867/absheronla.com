@@ -59,8 +59,9 @@ header {
   gap: 10px;
 }
 
-.logo {
-  height: 160px; /* bigger logo */
+.logo img {
+  height: 160px;
+  width: auto;
   transition: transform 0.3s;
 }
 
@@ -398,4 +399,5 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
 
