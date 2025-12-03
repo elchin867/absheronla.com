@@ -57,7 +57,7 @@ header {
   /* no fixed height on the container */
 }
 
-.logo img {
+.logo {
   max-height: 60px;   /* or 70px, whatever looks balanced */
   width: auto;
   height: auto;        /* let max-height control size */
@@ -323,7 +323,7 @@ footer .socials a:hover {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .logo img {
+  .logo {
     height: 70px;
   }
 }
@@ -373,7 +373,7 @@ footer .socials a:hover {
 }
 
 @media (max-width: 480px) {
-  .logo img {
+  .logo {
     height: 55px;
   }
 
@@ -390,6 +390,7 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
 
 
 
