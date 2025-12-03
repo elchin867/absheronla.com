@@ -60,15 +60,16 @@ header {
 }
 
 .logo img {
-  height: 80px;   /* elegant, balanced */
+  height: 80px;
   width: auto;
   transition: transform 0.3s;
 }
 
-
-.logo:hover {
+/* hover ONLY the image */
+.logo img:hover {
   transform: scale(1.05);
 }
+
 
 /* Hamburger */
 .hamburger {
@@ -400,6 +401,7 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
 
 
 
