@@ -64,7 +64,7 @@ header {
 }
 
 .logo {
-  max-height: 60px;   /* or 70px, whatever looks balanced */
+  max-height: 90px;   /* or 70px, whatever looks balanced */
   width: auto;
   height: auto;        /* let max-height control size */
   display: block;
@@ -398,4 +398,5 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
 
