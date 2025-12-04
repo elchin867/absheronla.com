@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 /* Reset & Base */
 * {
   box-sizing: border-box;
@@ -5,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: #f4f7fc;
   color: #0a1a3c;
 }
@@ -169,7 +171,7 @@ header {
   font-size: 0.85rem;
   padding: 4px 10px;
   transition: transform 0.2s, color 0.2s, background 0.2s, border-color 0.2s;
-  font-family: 'Segoe UI', Arial, sans-serif; /* uniform font */
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   line-height: 1;
   min-width: 40px;
@@ -398,5 +400,6 @@ footer .socials a:hover {
     padding: 3px 8px;
   }
 }
+
 
 
